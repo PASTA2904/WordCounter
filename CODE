@@ -1,0 +1,22 @@
+# WordCounter
+import java.util.Scanner;
+
+public class WordCounter {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter a text: ");
+        String inputText = scanner.nextLine();
+
+        // Split the input text into an array of words using space and punctuation as delimiters
+        String[] words = inputText.split("[\\s\\p{Punct}]+");
+
+        // Initialize a counter variable to keep track of the number of words
+        int Count = words.length;
+
+        System.out.println("Total count of words: " + Count);
+
+        scanner.close();
+    }
+}
+
